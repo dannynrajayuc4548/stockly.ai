@@ -24,4 +24,4 @@ hope you star the project ✨...
 
 ## Star History ⭐
 
-[![Star History Chart](https://api.star-history.com/svg?repos=anshk1234/Matrix_app&type=date&legend=top-left)](https://www.star-history.com/#anshk1234/Matrix_app&type=date&legend=top-left)
+[![Star History Chart](https://api.star-history.com/svg?repos=anshk1234/stockly&type=date&legend=top-left)](https://www.star-history.com/#anshk1234/stockly&type=date&legend=top-left)
