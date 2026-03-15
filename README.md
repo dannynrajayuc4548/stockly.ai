@@ -20,7 +20,9 @@ Deployed app link- https://live-stock-market-dashboard.streamlit.app/
 ## 5. personal portfolio
 <img width="1366" height="768" alt="Screenshot (636)" src="https://github.com/user-attachments/assets/b02a759e-cc97-42be-b1f8-1a82a84f7caf" />
 
-hope you star the project ✨...
+if you like the project don't forget to star✨...
+
+---
 
 ## Star History ⭐
 
