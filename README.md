@@ -19,7 +19,7 @@ A feature-rich **Streamlit** web app for real-time stock market data, interactiv
 ## 🖥️ Screenshots
 
 ### Live Stock Prices
-![Live Prices](https://live-stock-market-dashboard.streamlit.app/)
+
 
 ### Company Comparison
 Compare companies' performance over time with interactive charts.
