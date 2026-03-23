@@ -15,7 +15,7 @@ from ai_addon import render_ai_tab
 import requests 
 
 # Page config
-st.set_page_config(page_title="📈 Live Stock Dashboard", layout="wide")
+st.set_page_config(page_title="📈 Stockly AI", layout="wide")
 
 # --- Splash Animation ---
 def load_lottiefile(filepath):
