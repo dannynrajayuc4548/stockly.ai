@@ -28,12 +28,8 @@
 
 ## 🖥️ Screenshots
 
-> _Add screenshots here to showcase the app's UI_
+<img width="1366" height="768" alt="Screenshot (757)" src="https://github.com/user-attachments/assets/a140fa33-ea75-4dc0-80df-02dc16616771" />
 
-### Live Stock Prices
-### Company Comparison
-### AI Predictive Analysis
-### Personal Portfolio Tracker
 
 ---
 
