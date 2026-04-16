@@ -11,7 +11,7 @@ st.set_page_config(
     page_title="Stockly.AI",
     page_icon="📈",
     layout="wide",  # changed from 'centered' — more room for charts
-    initial_sidebar_state="expanded",
+    initial_sidebar_state="collapsed",  # personal pref: start with sidebar hidden
 )
 
 # ── CSS — Claude.ai dark aesthetic ───────────────────────────────────────────
@@ -33,7 +33,7 @@ html, body,
 [data-testid="stDecoration"] { display: none !important; }
 [data-testid="stMainBlockContainer"] {
     padding: 28px 36px 120px 36px !important;
-    max-width: 820px !important;
+    max-width: 960px !important;  /* widened slightly for better chart readability */
     margin: 0 auto !important;
 }
 
@@ -91,6 +91,4 @@ html, body,
 }
 [data-testid="stSidebar"] .stButton > button:hover {
     background-color: #232323 !important;
-    color: #d4d4d4 !important;
-}
-[data-testid="stSidebar"] hr
+    color: #d4d
