@@ -3,3 +3,4 @@ yfinance
 plotly
 requests
 pandas
+numpy  # added for numerical operations
