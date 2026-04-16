@@ -11,7 +11,7 @@ st.set_page_config(
     page_title="Stockly.AI",
     page_icon="📈",
     layout="wide",  # changed from 'centered' — more room for charts
-    initial_sidebar_state="collapsed",  # personal pref: start with sidebar hidden
+    initial_sidebar_state="expanded",  # personal pref: keep sidebar visible on load
 )
 
 # ── CSS — Claude.ai dark aesthetic ───────────────────────────────────────────
@@ -89,6 +89,4 @@ html, body,
     margin-bottom: 4px !important;
     transition: background 0.12s !important;
 }
-[data-testid="stSidebar"] .stButton > button:hover {
-    background-color: #232323 !important;
-    color: #d4d
+[data-testid
