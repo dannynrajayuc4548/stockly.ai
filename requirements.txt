@@ -4,3 +4,4 @@ plotly
 requests
 pandas
 numpy  # added for numerical operations
+scipy  # added for statistical analysis
