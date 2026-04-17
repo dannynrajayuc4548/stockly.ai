@@ -34,12 +34,13 @@ def get_stock_info(ticker: str) -> dict:
         return {"error": str(e), "symbol": ticker.upper()}
 
 
-def get_historical_data(ticker: str, period: str = "1mo", interval: str = "1d") -> pd.DataFrame:
+def get_historical_data(ticker: str, period: str = "3mo", interval: str = "1d") -> pd.DataFrame:
     """Retrieve historical OHLCV data for a stock.
     
     Args:
         ticker: Stock ticker symbol.
         period: Time period string ('1d', '5d', '1mo', '3mo', '6mo', '1y', '2y', '5y').
+                Defaulting to 3mo instead of 1mo for a more useful default view.
         interval: Data interval ('1m', '5m', '15m', '1h', '1d', '1wk', '1mo').
     
     Returns:
@@ -92,23 +93,4 @@ def search_tickers(query: str) -> list:
     """Search for stock tickers matching a query string.
     
     Args:
-        query: Company name or partial ticker symbol.
-    
-    Returns:
-        List of matching ticker dictionaries.
-    """
-    try:
-        results = yf.Search(query)
-        quotes = results.quotes
-        return [
-            {
-                "symbol": q.get("symbol", ""),
-                "name": q.get("longname", q.get("shortname", "")),
-                "exchange": q.get("exchange", ""),
-                "type": q.get("quoteType", ""),
-            }
-            for q in quotes[:10]
-        ]
-    except Exception as e:
-        print(f"Search error: {e}")
-        return []
+        query: Company name or parti
