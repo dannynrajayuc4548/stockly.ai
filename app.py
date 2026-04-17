@@ -11,7 +11,7 @@ st.set_page_config(
     page_title="Stockly.AI",
     page_icon="📈",
     layout="wide",  # changed from 'centered' — more room for charts
-    initial_sidebar_state="collapsed",  # personal pref: start collapsed so charts get full width on load
+    initial_sidebar_state="expanded",  # personal pref: start expanded so controls are visible immediately
 )
 
 # ── CSS — Claude.ai dark aesthetic ───────────────────────────────────────────
