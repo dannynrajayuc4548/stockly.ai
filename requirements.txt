@@ -7,3 +7,4 @@ numpy  # added for numerical operations
 scipy  # added for statistical analysis
 matplotlib  # added for additional charting options
 seaborn  # added for prettier statistical plots
+ta  # technical analysis library - useful for indicators like RSI, MACD
