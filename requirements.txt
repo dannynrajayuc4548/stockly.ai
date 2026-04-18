@@ -6,3 +6,4 @@ pandas
 numpy  # added for numerical operations
 scipy  # added for statistical analysis
 matplotlib  # added for additional charting options
+seaborn  # added for prettier statistical plots
