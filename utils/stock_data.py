@@ -34,13 +34,13 @@ def get_stock_info(ticker: str) -> dict:
         return {"error": str(e), "symbol": ticker.upper()}
 
 
-def get_historical_data(ticker: str, period: str = "3mo", interval: str = "1d") -> pd.DataFrame:
+def get_historical_data(ticker: str, period: str = "6mo", interval: str = "1d") -> pd.DataFrame:
     """Retrieve historical OHLCV data for a stock.
     
     Args:
         ticker: Stock ticker symbol.
         period: Time period string ('1d', '5d', '1mo', '3mo', '6mo', '1y', '2y', '5y').
-                Defaulting to 3mo instead of 1mo for a more useful default view.
+                Using 6mo as default — gives a better picture for trend analysis.
         interval: Data interval ('1m', '5m', '15m', '1h', '1d', '1wk', '1mo').
     
     Returns:
@@ -90,7 +90,4 @@ def calculate_price_change(ticker: str) -> dict:
 
 
 def search_tickers(query: str) -> list:
-    """Search for stock tickers matching a query string.
-    
-    Args:
-        query: Company name or parti
+    """Search for stock tic
