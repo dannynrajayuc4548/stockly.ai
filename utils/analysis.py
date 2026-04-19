@@ -97,6 +97,6 @@ def get_summary_stats(df: pd.DataFrame) -> dict:
         'avg_volume': int(df['Volume'].mean()) if 'Volume' in df.columns else None,
         'high_52w': round(float(df['High'].max()), 2) if 'High' in df.columns else None,
         'low_52w': round(float(df['Low'].min()), 2) if 'Low' in df.columns else None,
-        'avg_return': round(float(returns.mean()) * 100, 4) if not returns.empty else None,
-        'total_return': round(float((df['Close'].iloc[-1] / df['Close'].iloc[0] - 1) * 100), 2) if len(df) > 1 else None,
+        'avg_return': round(float(returns.mean() * 100), 4) if len(returns) > 0 else None,
+        'volatility_30d': round(calculate_volatility(df, period=30), 2),
     }
