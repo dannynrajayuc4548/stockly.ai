@@ -59,7 +59,7 @@ def create_price_chart(df: pd.DataFrame, ticker: str, period: str = "1mo") -> go
         title=f"{ticker} — {period} Price History",
         xaxis_rangeslider_visible=False,
         template="plotly_dark",
-        height=500,
+        height=600,  # increased from 500 — felt too cramped on my monitor
         margin=dict(l=10, r=10, t=40, b=10),
         legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
     )
@@ -110,15 +110,4 @@ def create_returns_histogram(df: pd.DataFrame, ticker: str) -> go.Figure:
 
     fig = px.histogram(
         daily_returns,
-        nbins=40,
-        title=f"{ticker} — Daily Returns Distribution",
-        template="plotly_dark",
-        labels={"value": "Daily Return (%)", "count": "Frequency"},
-        color_discrete_sequence=["#5c6bc0"],
-    )
-    fig.update_layout(
-        height=350,
-        margin=dict(l=10, r=10, t=40, b=10),
-        showlegend=False,
-    )
-    return fig
+        
