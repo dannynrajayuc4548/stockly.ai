@@ -107,8 +107,7 @@ def create_returns_histogram(df: pd.DataFrame, ticker: str) -> go.Figure:
         Plotly Figure object
     """
     daily_returns = df["Close"].pct_change().dropna() * 100
-
-    # using 40 bins — default was too coarse for spotting return distribution shape
+    # using 40 bins instead of default — gives a cleaner distribution shape imo
     fig = go.Figure(go.Histogram(
         x=daily_returns,
         nbinsx=40,
@@ -117,7 +116,7 @@ def create_returns_histogram(df: pd.DataFrame, ticker: str) -> go.Figure:
         name="Daily Returns",
     ))
     fig.update_layout(
-        title=f"{ticker} — Daily Returns Distribution",
+        title=f"{ticker} — Daily Return Distribution",
         xaxis_title="Return (%)",
         yaxis_title="Frequency",
         template="plotly_dark",
