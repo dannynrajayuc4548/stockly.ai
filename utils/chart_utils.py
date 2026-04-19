@@ -108,20 +108,17 @@ def create_returns_histogram(df: pd.DataFrame, ticker: str) -> go.Figure:
     """
     daily_returns = df["Close"].pct_change().dropna() * 100
 
-    # using 30 bins — found the default too coarse for visualizing return distribution
-    fig = go.Figure()
-    fig.add_trace(
-        go.Histogram(
-            x=daily_returns,
-            nbinsx=30,
-            name="Daily Returns",
-            marker_color="#5c6bc0",
-            opacity=0.8,
-        )
-    )
+    # using 40 bins — default was too coarse for spotting return distribution shape
+    fig = go.Figure(go.Histogram(
+        x=daily_returns,
+        nbinsx=40,
+        marker_color="#5c6bc0",
+        opacity=0.8,
+        name="Daily Returns",
+    ))
     fig.update_layout(
         title=f"{ticker} — Daily Returns Distribution",
-        xaxis_title="Daily Return (%)",
+        xaxis_title="Return (%)",
         yaxis_title="Frequency",
         template="plotly_dark",
         height=400,
