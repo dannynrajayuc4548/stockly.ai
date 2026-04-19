@@ -97,18 +97,6 @@ def get_summary_stats(df: pd.DataFrame) -> dict:
         'avg_volume': int(df['Volume'].mean()) if 'Volume' in df.columns else None,
         'high_52w': round(float(df['High'].max()), 2) if 'High' in df.columns else None,
         'low_52w': round(float(df['Low'].min()), 2) if 'Low' in df.columns else None,
-        'avg_daily_return': round(float(returns.mean() * 100), 4),
-        'volatility_annualized': round(calculate_volatility(df), 2),
-        'sharpe_ratio': round(
-            float((returns.mean() / returns.std()) * np.sqrt(252)), 4
-        ) if returns.std() != 0 else 0.0,
-        'max_drawdown': round(float(_max_drawdown(df['Close'])), 4),
+        'avg_return': round(float(returns.mean()) * 100, 4) if not returns.empty else None,
+        'total_return': round(float((df['Close'].iloc[-1] / df['Close'].iloc[0] - 1) * 100), 2) if len(df) > 1 else None,
     }
-
-
-def _max_drawdown(prices: pd.Series) -> float:
-    """Calculate maximum drawdown from a price series."""
-    cumulative = (1 + prices.pct_change()).cumprod()
-    rolling_max = cumulative.cummax()
-    drawdown = (cumulative - rolling_max) / rolling_max
-    return drawdown.min() * 100
